@@ -1,13 +1,22 @@
-import { useContext } from "react"
-import { CounterContext } from "../context/CounterProvider"
-
-export const Counter = () => {
-    const { count, setCount } = useContext(CounterContext)
-
-    return <div>
-        <h2>Counter</h2>
-        <p>Count: { count}</p>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-        <button onClick={() => setCount(count - 1)} disabled={count <= 0}>Decrement</button>
-    </div>
+import { useDispatch, useSelector } from "react-redux";
+import { increment } from "../store/counter";
+export const Counter = (props) => {
+    const count = useSelector(state => state.counter.value)
+    const user = useSelector(state => state.user)
+    const dispatch = useDispatch();
+    return (
+        <div>
+            <h2>Counter: {props.name} </h2>
+            <h2>User: {user.name} </h2>
+            <h2>Email: {user.email} </h2>
+            <h2>Stree Address: {user.address.street} </h2>
+            <p>Count: { count }</p>
+            <button onClick={ () => dispatch(increment()) } >
+                Increment
+                </button>
+        </div>
+    )
 }
+   
+    
+   

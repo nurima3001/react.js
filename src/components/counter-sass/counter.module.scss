@@ -1,0 +1,47 @@
+$primary-color: #fff;
+$success-color: #0f0;
+$danger-color:#f00;
+$grey-color:#afafaf;
+$dark-color:#000;
+
+.container {
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.digit {
+    width:33.3333333% - 2;
+    margin:2px;
+    float: left;
+    background: $dark-color;
+    color: $primary-color;
+    box-shadow: 1px 0px 2px 0px $grey-color;
+}
+
+.buttonGroupContainer {
+    margin:auto;
+    width: 105px;
+
+
+    .buttonContainer {
+    width: 52px;
+    float: left;
+    .button{
+        padding: 1px;
+        border-radius: 50px;
+        width: 50px;
+        height: 50px;
+        color: $primary-color;
+    }
+    .buttonIncrement {
+        @extend.button;
+        background-color: $success-color;
+    }
+    .buttonDecrement {
+        @extend.button;
+        background-color: $danger-color;
+    }
+
+}
+
+}

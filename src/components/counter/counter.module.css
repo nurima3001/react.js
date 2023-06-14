@@ -1,0 +1,48 @@
+.container {
+    display:flex;
+    flex-direction:row;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.digit.container {
+    padding:1px;
+    flex:1;
+    
+    
+}
+
+.digit {
+    width: 94px;
+    margin:auto;
+    float: left;
+    background: #180d0d;
+    color:#fff;
+    box-shadow: 1px 0px 2px 0px #afafaf;
+}
+
+.buttonGroupContainer {
+    margin:auto;
+    width: 105px;
+}
+
+.buttonContainer {
+    width: 52px;
+    float: left;
+}
+
+.button{
+    padding: 1px;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.button {
+    background-color: green;
+    
+}
+.button {
+    background-color: red;
+}
